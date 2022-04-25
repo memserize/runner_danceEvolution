@@ -12,4 +12,8 @@ public class PlayerRefrenceManager : MonoBehaviour
     [Title("Controllers")]
     public PlayerCharacterAnimationController animationController;
     public PlayerMovementController movementController;
+
+    [Title("UI Elements")]
+    public CalenderUIElement calender;
+
 }

@@ -6,8 +6,10 @@ using Sirenix.OdinInspector;
 
 public class PlayerCharacterAnimationController : MonoBehaviour
 {
+    public string date;
+
     [Space]
-    public int currentYear = 1901;
+    public DateTime currentDate;
 
     [Space]
     public Animator animator;
@@ -15,6 +17,17 @@ public class PlayerCharacterAnimationController : MonoBehaviour
     [Space]
     public DanceStyle[] danceStyles;
 
+    private void Start()
+    {
+        currentDate = new DateTime(1990, 1, 1);
+        date = currentDate.ToString();
+    }
+
+    public void UpdateDate()
+    {
+        date = currentDate.ToString();
+        Registry.Instance.refrences.player.calender.dateText.text = currentDate.Year.ToString();
+    }
 
     [Button]
     public void PopulateDanceStyleArray()
@@ -39,7 +52,7 @@ public class PlayerCharacterAnimationController : MonoBehaviour
 
         for (int i = 0; i < danceStyles.Length; i++)
         {
-            if(currentYear > danceStyles[i].dancePeriod.yearRangeMin && currentYear < danceStyles[i].dancePeriod.yearRangeMax)
+            if(currentDate.Year > danceStyles[i].dancePeriod.yearRangeMin && currentDate.Year < danceStyles[i].dancePeriod.yearRangeMax)
             {
                 danceStyle = danceStyles[i];
                 return danceStyle;

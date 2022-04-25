@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
         if (!gameRunning)
         {
             refrences.levelGenerator.StartGeneration();
-
+            refrences.player.movementController.Initalize();
             refrences.player.foreverBasicRunner.followSpeed = 2;
             refrences.player.animationController.SetAnimation("walking");
             gameRunning = true;

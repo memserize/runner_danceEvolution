@@ -1,42 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public class PlayerMovementController : MonoBehaviour
 {
+
+    public bool initialized;
+
+    [Space]
+    public Transform characterTransform;
+
+    [Space]
+    public float xMin;
+    public float xMax;
+
     private Vector3 screenPoint;
     private Vector3 offset;
 
-    [Space]
-    public float yClampMin;
-    public float yClampMax;
 
-    [Space]
-    public float xClampMin;
-    public float xClampMax;
-
-    [Space]
-    public float zClampMin;
-    public float zClampMax;
-
-
-    void Start()
+    private void Start()
     {
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
-        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+        offset = characterTransform.localPosition - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+    }
+
+
+    public void Initalize()
+    {
+        initialized = true;
     }
 
     void Update()
     {
-        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+        if(initialized)
+        {
+            Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
 
-        Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
+            Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
 
-        Mathf.Clamp(curPosition.x, xClampMin, xClampMax);
-        Mathf.Clamp(curPosition.y, yClampMin, yClampMax);
-        Mathf.Clamp(curPosition.x, zClampMin, zClampMax);
+            Mathf.Clamp(curPosition.x, xMin, xMax);
+            Mathf.Clamp(curPosition.y, 0, 0);
+            Mathf.Clamp(curPosition.x, 0, 0);
 
-        transform.position = new Vector3(Mathf.Clamp(curPosition.x, xClampMin, xClampMax), Mathf.Clamp(curPosition.y, yClampMin, yClampMax), Mathf.Clamp(curPosition.z, zClampMin, zClampMax));
+            characterTransform.localPosition = new Vector3(Mathf.Clamp(curPosition.x, xMin, xMax), 0, 0 );
+        }
 
     }
 }

@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1352712394242620556}
   - component: {fileID: 5775162618159148984}
   - component: {fileID: 5040471517068721329}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,8 +196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInitialized: 1
   _camera: {fileID: 0}
-  target: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
+  target: {fileID: 2184346912719399168}
+  offset: {x: 0, y: 0.4, z: -4}
 --- !u!1 &1138715073877299288
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +288,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2184346912719399168}
+  - component: {fileID: 306183709266258237}
+  - component: {fileID: 4865762608392838246}
   m_Layer: 0
   m_Name: Gate
   m_TagString: Untagged
@@ -314,6 +316,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!65 &306183709266258237
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520962531729617850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4393619, y: 0.81281495, z: 0.06375384}
+  m_Center: {x: 0.0066745877, y: 0.35640782, z: -0.34707725}
+--- !u!114 &4865762608392838246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520962531729617850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f6bba66bb7b754e95fbd545a3bd944, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  period: 0
+  gateValue: 1
+  gateText: {fileID: 5753365537474562687}
 --- !u!1 &3162329934336765630
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +355,7 @@ GameObject:
   - component: {fileID: 8474336009203520215}
   - component: {fileID: 3633834475780959774}
   - component: {fileID: 5753365537474562687}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
