@@ -15,18 +15,25 @@ public class PlayerCharacterAnimationController : MonoBehaviour
     public Animator animator;
 
     [Space]
+    public int index;
     public DanceStyle[] danceStyles;
 
     private void Start()
     {
-        currentDate = new DateTime(1990, 1, 1);
+        animator = danceStyles[index].character.animator;
+        currentDate = new DateTime(1900, 1, 1);
         date = currentDate.ToString();
     }
 
-    public void UpdateDate()
+
+    public void UpdateDate(DateTime dateTime)
     {
+        currentDate = dateTime;
         date = currentDate.ToString();
+
         Registry.Instance.refrences.player.calender.dateText.text = currentDate.Year.ToString();
+
+        print(currentDate.Year);
     }
 
     [Button]
@@ -79,8 +86,12 @@ public class PlayerCharacterAnimationController : MonoBehaviour
 public class DanceStyle
 {
     public string id;
+
     [Space]
     public DancePeriod dancePeriod;
+
+    [Space]
+    public PlayerCharacter character;
 
 }
 

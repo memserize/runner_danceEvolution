@@ -35,7 +35,11 @@ public class Refrences
     public GameManager gameManager;
     public LevelGenerator levelGenerator;
 
+
     [Title("Player")]
     public PlayerRefrenceManager player;
+
+    [Title("Levels")]
+    public GateValueAssigner gatesValueAssigner;
 
 }

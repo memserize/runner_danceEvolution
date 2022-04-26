@@ -846,7 +846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4865762608392838246, guid: 3713e56ed75df3f408958fa2c28b9400, type: 3}
       propertyPath: gateValue
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3713e56ed75df3f408958fa2c28b9400, type: 3}
@@ -971,11 +971,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0a2d81c77eb1056408e981eebe8f64dd, type: 2}
     - target: {fileID: 4865762608392838246, guid: 3713e56ed75df3f408958fa2c28b9400, type: 3}
       propertyPath: period
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4865762608392838246, guid: 3713e56ed75df3f408958fa2c28b9400, type: 3}
       propertyPath: gateValue
-      value: -14
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 5753365537474562687, guid: 3713e56ed75df3f408958fa2c28b9400, type: 3}
       propertyPath: m_fontColor.b
