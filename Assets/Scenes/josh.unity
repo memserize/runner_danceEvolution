@@ -1207,29 +1207,29 @@ MonoBehaviour:
   index: 0
   gateValues:
   - period: 1
-    value: 540
+    value: 482
   - period: 2
     value: 41
   - period: 0
-    value: 3650
+    value: 1420
   - period: 2
-    value: -10
+    value: 5
   - period: 2
-    value: 18
+    value: 6
   - period: 1
-    value: -72
+    value: 72
   - period: 2
-    value: 22
+    value: 2
   - period: 0
-    value: -7300
+    value: 730
   - period: 1
-    value: 108
+    value: 96
   - period: 2
-    value: -45
+    value: 8
   - period: 2
-    value: 14
+    value: 9
   - period: 1
-    value: -276
+    value: 100
 --- !u!1 &967097937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,16 +1699,16 @@ MonoBehaviour:
   - id: thriller
     dancePeriod:
       yearRangeMin: 1980
-      yearRangeMax: 1999
+      yearRangeMax: 2009
     character: {fileID: 5121986024280267919}
-  - id: hiphop
-    dancePeriod:
-      yearRangeMin: 2000
-      yearRangeMax: 2010
-    character: {fileID: 4064190227843142688}
   - id: kpop
     dancePeriod:
-      yearRangeMin: 2011
+      yearRangeMin: 2010
+      yearRangeMax: 2018
+    character: {fileID: 4064190227843142688}
+  - id: hiphop
+    dancePeriod:
+      yearRangeMin: 2019
       yearRangeMax: 2020
     character: {fileID: 2712396813126548858}
 --- !u!1 &1469089438
