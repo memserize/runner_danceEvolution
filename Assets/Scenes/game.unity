@@ -1207,13 +1207,13 @@ MonoBehaviour:
   index: 0
   gateValues:
   - period: 1
-    value: 480
+    value: 482
   - period: 2
-    value: 40
+    value: 41
   - period: 0
-    value: 1400
+    value: 1420
   - period: 2
-    value: 4
+    value: 5
   - period: 2
     value: 6
   - period: 1
@@ -1641,7 +1641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foreverBasicRunner: {fileID: 1463860211}
-  animationController: {fileID: 0}
+  animationController: {fileID: 1463860217}
   movementController: {fileID: 1463860215}
   calender: {fileID: 621130770}
 --- !u!114 &1463860215
@@ -1673,7 +1673,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   date: 
-  animator: {fileID: 5866666021558506281}
+  animator: {fileID: 0}
+  index: 0
   danceStyles:
   - id: classical_01
     dancePeriod:
@@ -4425,7 +4426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89371eb49bb0b7948a80327bd37c084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 6499637539372315324}
 --- !u!1 &574575312615198329
 GameObject:
   m_ObjectHideFlags: 0
@@ -11240,7 +11241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89371eb49bb0b7948a80327bd37c084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 8651312628649606585}
 --- !u!4 &2720241732028986219
 Transform:
   m_ObjectHideFlags: 0
@@ -12274,7 +12275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89371eb49bb0b7948a80327bd37c084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 8191317283958160051}
 --- !u!1 &3180367644521715152
 GameObject:
   m_ObjectHideFlags: 0
@@ -12592,7 +12593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89371eb49bb0b7948a80327bd37c084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 8089130341593493061}
 --- !u!1 &3314959728847901581
 GameObject:
   m_ObjectHideFlags: 0
@@ -15112,7 +15113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89371eb49bb0b7948a80327bd37c084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 7335549066446230751}
 --- !u!4 &4086586027113421707
 Transform:
   m_ObjectHideFlags: 0
@@ -18834,7 +18835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89371eb49bb0b7948a80327bd37c084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1927276065402657870}
 --- !u!1 &5125090947223940653
 GameObject:
   m_ObjectHideFlags: 0

@@ -32,8 +32,7 @@ public class PlayerCharacterAnimationController : MonoBehaviour
         date = currentDate.ToString();
 
         Registry.Instance.refrences.player.calender.dateText.text = currentDate.Year.ToString();
-
-        print(currentDate.Year);
+        SetDanceStyle();
     }
 
     [Button]
@@ -53,13 +52,13 @@ public class PlayerCharacterAnimationController : MonoBehaviour
     }
 
 
-    public DanceStyle GetDanceStyle()
+    public DanceStyle GetDanceStyle(int year)
     {
         DanceStyle danceStyle = new DanceStyle();
 
         for (int i = 0; i < danceStyles.Length; i++)
         {
-            if(currentDate.Year > danceStyles[i].dancePeriod.yearRangeMin && currentDate.Year < danceStyles[i].dancePeriod.yearRangeMax)
+            if(year > danceStyles[i].dancePeriod.yearRangeMin && year < danceStyles[i].dancePeriod.yearRangeMax)
             {
                 danceStyle = danceStyles[i];
                 return danceStyle;
@@ -71,7 +70,7 @@ public class PlayerCharacterAnimationController : MonoBehaviour
 
     public void SetDanceStyle()
     {
-        animator.SetTrigger(GetDanceStyle().id);
+        animator.SetTrigger(GetDanceStyle(currentDate.Year).id);
     }
 
     public void SetAnimation(string trigger)
