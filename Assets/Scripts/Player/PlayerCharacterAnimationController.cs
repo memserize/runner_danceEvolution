@@ -58,7 +58,7 @@ public class PlayerCharacterAnimationController : MonoBehaviour
 
         for (int i = 0; i < danceStyles.Length; i++)
         {
-            if(year > danceStyles[i].dancePeriod.yearRangeMin && year < danceStyles[i].dancePeriod.yearRangeMax)
+            if (year > danceStyles[i].dancePeriod.yearRangeMin && year < danceStyles[i].dancePeriod.yearRangeMax)
             {
                 danceStyle = danceStyles[i];
                 return danceStyle;
@@ -70,6 +70,7 @@ public class PlayerCharacterAnimationController : MonoBehaviour
 
     public void SetDanceStyle()
     {
+        Registry.Instance.refrences.player.swirlEffect.PlayEffect();
         animator.SetTrigger(GetDanceStyle(currentDate.Year).id);
     }
 

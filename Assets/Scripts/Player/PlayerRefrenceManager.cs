@@ -16,4 +16,7 @@ public class PlayerRefrenceManager : MonoBehaviour
     [Title("UI Elements")]
     public CalenderUIElement calender;
 
+    [Space]
+    public SwirlEffect swirlEffect;
+
 }
