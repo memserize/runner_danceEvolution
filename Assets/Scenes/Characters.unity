@@ -719,10 +719,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3553183048385574807, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e8f90da8492ce7f4aa9e3df1851de2a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
       propertyPath: m_Name
       value: Character_jay_BlackSuit (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1001626796426535868, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ab2dac41b16985149a524f23124ed101, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
 --- !u!4 &668355841 stripped
@@ -1024,10 +1032,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3553183048385574807, guid: ac5eff7a54c87e145a24929e06b4afaa, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8dbc17aed4683534185761accfd5ecb5, type: 2}
     - target: {fileID: 919132149155446097, guid: ac5eff7a54c87e145a24929e06b4afaa, type: 3}
       propertyPath: m_Name
       value: Character_josh_classicsuit (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1001626796426535868, guid: ac5eff7a54c87e145a24929e06b4afaa, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc4b9ed60f8e1cb45b6c0ad59f3ace02, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac5eff7a54c87e145a24929e06b4afaa, type: 3}
 --- !u!4 &1092944051 stripped
@@ -1451,7 +1467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.6130004
+      value: 6.378
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1481,10 +1497,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4161540713855113284, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3553183048385574807, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c1cd9e3c4df893d47b2c88a8d98ba350, type: 2}
     - target: {fileID: 919132149155446097, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
       propertyPath: m_Name
       value: Character_jay_BlackSuit (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1001626796426535868, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 54226fef22a231d459c93cbad5f29c54, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
 --- !u!4 &1561694655 stripped
