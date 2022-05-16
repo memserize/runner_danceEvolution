@@ -18,9 +18,16 @@ public class PlayerRefrenceManager : MonoBehaviour
     public SwirlEffect swirlEffect;
 
     [Space]
+    public int characterSlotIndex;
+    public Transform[] characterSlotTransforms;
+
+    [Space]
     public int currentCharacterIndex;
     public PlayerCharacter currentCharacter;
+
+    [Space]
     public List<PlayerCharacter> playerCharacters = new List<PlayerCharacter>();
+    public List<CollectableCharacter> collectedCharacters = new List<CollectableCharacter>();
     
 
     public void SetPlayerCharacter()

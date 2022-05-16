@@ -43,6 +43,12 @@ public class CrowdCharacter : MonoBehaviour
         }
         variations[index].SetActive(true);
 
+        if(index < 3)
+        {
+            variations[index].GetComponent<RandomMaterial>().AssignMaterials();
+
+        }
+
         currentAnimator = variations[index].GetComponent<Animator>();
 
         variations[index].GetComponent<AnimationControllerAssigner>().SetAnimator();

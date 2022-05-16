@@ -19689,14 +19689,14 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: db3886b9a1d47c146851bb3ba9fb1ed6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a084e7c628db284ab3ae13b7e1d2662, type: 3}
---- !u!95 &6439496327731347457 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 3a084e7c628db284ab3ae13b7e1d2662, type: 3}
-  m_PrefabInstance: {fileID: 592006073722650000}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1134206847375497851 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3a084e7c628db284ab3ae13b7e1d2662, type: 3}
+  m_PrefabInstance: {fileID: 592006073722650000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6439496327731347457 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 3a084e7c628db284ab3ae13b7e1d2662, type: 3}
   m_PrefabInstance: {fileID: 592006073722650000}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &357565247966511297 stripped
@@ -19723,6 +19723,9 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 0f872f0a6d9879741b3244e9311c6b3a, type: 2}
   - {fileID: 9100000, guid: db3886b9a1d47c146851bb3ba9fb1ed6, type: 2}
   - {fileID: 9100000, guid: 97f928293a35dc444acf769892f3009e, type: 2}
+  onEnable:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &702010222110754313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19793,14 +19796,24 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
   m_PrefabInstance: {fileID: 702010222110754313}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1023640852840817122 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
+  m_PrefabInstance: {fileID: 702010222110754313}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &5120175254203993696 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -3553183048385574807, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
+  m_PrefabInstance: {fileID: 702010222110754313}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &396144428317145944 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
   m_PrefabInstance: {fileID: 702010222110754313}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1023640852840817122 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
+--- !u!137 &313128612601456053 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1001626796426535868, guid: 7798c8d6c4a0f6e499bf81659ec83a85, type: 3}
   m_PrefabInstance: {fileID: 702010222110754313}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &639580409358870974
@@ -19822,6 +19835,37 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 0f872f0a6d9879741b3244e9311c6b3a, type: 2}
   - {fileID: 9100000, guid: db3886b9a1d47c146851bb3ba9fb1ed6, type: 2}
   - {fileID: 9100000, guid: 97f928293a35dc444acf769892f3009e, type: 2}
+  onEnable:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1036636184162018976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396144428317145944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d04b4f91f39d342be2bb068c6b3f3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topSkinnedMeshRenderers:
+  - {fileID: 5120175254203993696}
+  topMaterials:
+  - {fileID: 2100000, guid: b23ec1a8223c1d448bc4b5130d06e332, type: 2}
+  - {fileID: 2100000, guid: c1cd9e3c4df893d47b2c88a8d98ba350, type: 2}
+  - {fileID: 2100000, guid: e8f90da8492ce7f4aa9e3df1851de2a0, type: 2}
+  - {fileID: 2100000, guid: b4c651408310fb14dbb2fbbcfaee0046, type: 2}
+  - {fileID: 2100000, guid: cd1ac1a35f4cdab49bfb729d462341a5, type: 2}
+  bottomSkinnedMeshRenderers:
+  - {fileID: 313128612601456053}
+  bottomMaterials:
+  - {fileID: 2100000, guid: 35793f30109ff494ba8bb89b741590ca, type: 2}
+  - {fileID: 2100000, guid: 54226fef22a231d459c93cbad5f29c54, type: 2}
+  - {fileID: 2100000, guid: ab2dac41b16985149a524f23124ed101, type: 2}
+  - {fileID: 2100000, guid: eca9941d34d9dd74c959273f6c28aaca, type: 2}
+  - {fileID: 2100000, guid: b60fa6d43e852ca499ad200cbe7a1dfe, type: 2}
 --- !u!1001 &8496923099011992543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19921,6 +19965,9 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 0f872f0a6d9879741b3244e9311c6b3a, type: 2}
   - {fileID: 9100000, guid: db3886b9a1d47c146851bb3ba9fb1ed6, type: 2}
   - {fileID: 9100000, guid: 97f928293a35dc444acf769892f3009e, type: 2}
+  onEnable:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &9054261183667710546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19982,9 +20029,19 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 97f928293a35dc444acf769892f3009e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee7bd38a0d2927b4797c5f2aa515fea6, type: 3}
---- !u!1 &8171318916427159299 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ee7bd38a0d2927b4797c5f2aa515fea6, type: 3}
+--- !u!137 &3681618224519504443 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -3553183048385574807, guid: ee7bd38a0d2927b4797c5f2aa515fea6, type: 3}
+  m_PrefabInstance: {fileID: 9054261183667710546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &8088830864162228718 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1001626796426535868, guid: ee7bd38a0d2927b4797c5f2aa515fea6, type: 3}
+  m_PrefabInstance: {fileID: 9054261183667710546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3228420378931992515 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: ee7bd38a0d2927b4797c5f2aa515fea6, type: 3}
   m_PrefabInstance: {fileID: 9054261183667710546}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &8803846702149815737 stripped
@@ -19992,9 +20049,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee7bd38a0d2927b4797c5f2aa515fea6, type: 3}
   m_PrefabInstance: {fileID: 9054261183667710546}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &3228420378931992515 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: ee7bd38a0d2927b4797c5f2aa515fea6, type: 3}
+--- !u!1 &8171318916427159299 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ee7bd38a0d2927b4797c5f2aa515fea6, type: 3}
   m_PrefabInstance: {fileID: 9054261183667710546}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &2838588265597731910
@@ -20016,3 +20073,44 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 0f872f0a6d9879741b3244e9311c6b3a, type: 2}
   - {fileID: 9100000, guid: db3886b9a1d47c146851bb3ba9fb1ed6, type: 2}
   - {fileID: 9100000, guid: 97f928293a35dc444acf769892f3009e, type: 2}
+  onEnable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4070902749588527492}
+        m_TargetAssemblyTypeName: RandomMaterial, Assembly-CSharp
+        m_MethodName: AssignMaterials
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4070902749588527492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8171318916427159299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d04b4f91f39d342be2bb068c6b3f3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topSkinnedMeshRenderers:
+  - {fileID: 3681618224519504443}
+  topMaterials:
+  - {fileID: 2100000, guid: 9ca04ad607a75cc47b46e3f3cc7092c0, type: 2}
+  - {fileID: 2100000, guid: 9f57cd020c6cecf419db2a2c33f27f89, type: 2}
+  - {fileID: 2100000, guid: 4ab699640ae0dae4c9d76d3fcc5c2735, type: 2}
+  - {fileID: 2100000, guid: 8dbc17aed4683534185761accfd5ecb5, type: 2}
+  bottomSkinnedMeshRenderers:
+  - {fileID: 8088830864162228718}
+  bottomMaterials:
+  - {fileID: 2100000, guid: bc4b9ed60f8e1cb45b6c0ad59f3ace02, type: 2}
+  - {fileID: 2100000, guid: 3f50a590a6ba51b42aebb793ecbd1e37, type: 2}
+  - {fileID: 2100000, guid: 155b2aec852e69443a942c5dc8477a49, type: 2}
+  - {fileID: 2100000, guid: add63e907af80504c9b51462f43ec894, type: 2}
