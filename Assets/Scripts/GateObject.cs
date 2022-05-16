@@ -23,7 +23,6 @@ public class GateObject : MonoBehaviour
             gateText.text = " + " + gateValue + " " + period;
 
         }
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -50,9 +49,14 @@ public class GateObject : MonoBehaviour
                     break;
             }
             Registry.Instance.refrences.player.animationController.UpdateDate(Registry.Instance.refrences.player.animationController.currentDate);
-
-
         }
+    }
+
+    float distanceToPlayer;
+    private void Update()
+    {
+        distanceToPlayer = Vector3.Distance(Registry.Instance.refrences.player.transform.position, transform.position);
+
     }
 
 

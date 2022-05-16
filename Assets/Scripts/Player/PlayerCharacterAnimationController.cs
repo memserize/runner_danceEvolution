@@ -12,12 +12,12 @@ public class PlayerCharacterAnimationController : MonoBehaviour
     public DateTime currentDate;
 
     [Space]
+    public string currentAnim;
     public Animator animator;
 
     [Space]
     public int index;
     public DanceStyle[] danceStyles;
-
 
 
     private void Start()
@@ -74,7 +74,7 @@ public class PlayerCharacterAnimationController : MonoBehaviour
     {
         Registry.Instance.refrences.player.swirlEffect.PlayEffect();
         Registry.Instance.refrences.player.SetPlayerCharacter();
-        animator.SetTrigger(GetDanceStyle(currentDate.Year).id);
+        SetAnimation(GetDanceStyle(currentDate.Year).id);
 
         Registry.Instance.refrences.crowdManager.UpdateCharacters();
     }
@@ -83,6 +83,12 @@ public class PlayerCharacterAnimationController : MonoBehaviour
     public void SetAnimation(string trigger)
     {
         animator.SetTrigger(trigger);
+        currentAnim = trigger;
+    }
+
+    private void Update()
+    {
+        
     }
 
 }
