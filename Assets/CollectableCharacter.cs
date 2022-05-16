@@ -41,19 +41,13 @@ public class CollectableCharacter : MonoBehaviour
         }
         variations[index].SetActive(true);
 
-        if (index < 3)
-        {
-            variations[index].GetComponent<RandomMaterial>().AssignMaterials();
-
-        }
-
-        currentAnimator = variations[index].GetComponent<Animator>();
-
         variations[index].GetComponent<AnimationControllerAssigner>().SetAnimator();
 
         if (playEffect)
         {
             swirlEffect.PlayEffect();
         }
+
+        //variations[index].GetComponent<Animator>().runtimeAnimatorController = Registry.Instance.refrences.player.animationController.animator.runtimeAnimatorController;
     }
 }

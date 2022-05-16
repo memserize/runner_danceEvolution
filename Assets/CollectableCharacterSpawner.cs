@@ -48,6 +48,7 @@ public class CollectableCharacterSpawner : MonoBehaviour
             character.transform.parent = player.characterSlotTransforms[player.characterSlotIndex].transform;
             player.characterSlotIndex++;
             character.transform.localPosition = new Vector3();
+            character.variations[character.index].GetComponent<Animator>().runtimeAnimatorController = player.animationController.animator.runtimeAnimatorController;
             player.collectedCharacters.Add(character);
             gameObject.SetActive(false);
         }
