@@ -60,6 +60,8 @@ public class PlayerMovementController : MonoBehaviour
                 initialized = false;
                 Registry.Instance.refrences.player.animationController.SetAnimation("idle");
 
+                Registry.Instance.refrences.gameManager.OnLevelEnd.Invoke();
+
             }
 
         }

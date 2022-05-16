@@ -601,8 +601,9 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    1: ODIN_INSPECTOR;ODIN_INSPECTOR_3
-    7: ODIN_INSPECTOR;ODIN_INSPECTOR_3
+    1: VS_SHARE;ODIN_INSPECTOR;ODIN_INSPECTOR_3
+    4: VS_SHARE
+    7: VS_SHARE;ODIN_INSPECTOR;ODIN_INSPECTOR_3
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

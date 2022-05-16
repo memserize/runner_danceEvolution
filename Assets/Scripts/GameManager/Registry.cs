@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using AppAdvisory.SharingSystem;
+using DG.Tweening;
 
 public class Registry : MonoBehaviour
 {
@@ -27,6 +29,18 @@ public class Registry : MonoBehaviour
     }
 
 
+    public void TakeCrewPhoto()
+    {
+        refrences.takeAndShowScreenshot.OnClicked();
+        //refrences.vShare.OnClickedOnIconScreenshot();
+        StartCoroutine(photoWait());
+    }
+
+    public IEnumerator photoWait()
+    {
+        yield return new WaitForSeconds(0.63f);
+        refrences.vShare.OnClickedOnIconScreenshot();
+    }
 
 
 
@@ -42,6 +56,11 @@ public class Refrences
 
     [Title("Player")]
     public PlayerRefrenceManager player;
+
+
+    [Title("ScreenShot")]
+    public TakeAndShowScreenshotFromScript takeAndShowScreenshot;
+    public VSSHARE vShare;
 
 
 
