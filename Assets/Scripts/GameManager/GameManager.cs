@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Dreamteck.Forever;
 
 public class GameManager : MonoBehaviour
 {
     public bool gameRunning;
+
 
     Refrences refrences;
 
@@ -18,10 +18,11 @@ public class GameManager : MonoBehaviour
     {
         if (!gameRunning)
         {
-            refrences.levelGenerator.StartGeneration();
             refrences.player.movementController.Initalize();
-            refrences.player.foreverBasicRunner.followSpeed = 2;
+            refrences.player.SetPlayerCharacter();
             refrences.player.animationController.SetAnimation("walking");
+
+            refrences.crowdManager.Initialize();
             gameRunning = true;
         }
     }

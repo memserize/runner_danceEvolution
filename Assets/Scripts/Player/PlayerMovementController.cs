@@ -12,8 +12,15 @@ public class PlayerMovementController : MonoBehaviour
     public Transform characterTransform;
 
     [Space]
+    public float forwardMovementSpeed;
     public float xMin;
     public float xMax;
+
+    [Space]
+    public float distanceToLevelEnd;
+
+    [Space]
+    public Vector3 cameraOffset;
 
     private Vector3 screenPoint;
     private Vector3 offset;
@@ -31,6 +38,7 @@ public class PlayerMovementController : MonoBehaviour
         initialized = true;
     }
 
+
     void Update()
     {
         if(initialized)
@@ -41,9 +49,19 @@ public class PlayerMovementController : MonoBehaviour
 
             Mathf.Clamp(curPosition.x, xMin, xMax);
             Mathf.Clamp(curPosition.y, 0, 0);
-            Mathf.Clamp(curPosition.x, 0, 0);
 
-            characterTransform.localPosition = new Vector3(Mathf.Clamp(curPosition.x, xMin, xMax), 0, 0 );
+            transform.position = new Vector3(Mathf.Clamp(curPosition.x, xMin, xMax), 0, transform.position.z + (forwardMovementSpeed * Time.deltaTime));
+            Camera.main.transform.position = new Vector3(0, cameraOffset.y, transform.position.z + (forwardMovementSpeed * Time.deltaTime) + cameraOffset.z);
+
+            distanceToLevelEnd = Vector3.Distance(Registry.Instance.refrences.levelEnd.position, transform.position);
+
+            if (distanceToLevelEnd < 1)
+            {
+                initialized = false;
+                Registry.Instance.refrences.player.animationController.SetAnimation("idle");
+
+            }
+
         }
 
     }

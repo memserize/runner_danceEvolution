@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
-using Dreamteck.Forever;
 
 
 public class PlayerRefrenceManager : MonoBehaviour
 {
-    public Runner foreverBasicRunner;
 
     [Title("Controllers")]
     public PlayerCharacterAnimationController animationController;
@@ -18,5 +16,23 @@ public class PlayerRefrenceManager : MonoBehaviour
 
     [Space]
     public SwirlEffect swirlEffect;
+
+    [Space]
+    public int currentCharacterIndex;
+    public PlayerCharacter currentCharacter;
+    public List<PlayerCharacter> playerCharacters = new List<PlayerCharacter>();
+    
+
+    public void SetPlayerCharacter()
+    {
+        for (int i = 0; i < playerCharacters.Count; i++)
+        {
+            playerCharacters[i].gameObject.SetActive(false);
+        }
+        
+        currentCharacter = playerCharacters[currentCharacterIndex];
+        currentCharacter.gameObject.SetActive(true);
+        animationController.animator = currentCharacter.animator;
+    }
 
 }

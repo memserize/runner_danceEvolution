@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Dreamteck.Forever;
 using Sirenix.OdinInspector;
 
 public class Registry : MonoBehaviour
@@ -26,6 +25,11 @@ public class Registry : MonoBehaviour
         }
         Instance = this;
     }
+
+
+
+
+
 }
 
 [System.Serializable]
@@ -33,13 +37,12 @@ public class Refrences
 {
     [Title("Core")]
     public GameManager gameManager;
-    public LevelGenerator levelGenerator;
-
+    public CrowdManager crowdManager;
+    public Transform levelEnd;
 
     [Title("Player")]
     public PlayerRefrenceManager player;
 
-    [Title("Levels")]
-    public GateValueAssigner gatesValueAssigner;
+
 
 }

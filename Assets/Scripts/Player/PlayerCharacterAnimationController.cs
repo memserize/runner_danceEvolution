@@ -18,9 +18,10 @@ public class PlayerCharacterAnimationController : MonoBehaviour
     public int index;
     public DanceStyle[] danceStyles;
 
+
+
     private void Start()
     {
-        animator = danceStyles[index].character.animator;
         currentDate = new DateTime(1900, 1, 1);
         date = currentDate.ToString();
     }
@@ -34,6 +35,7 @@ public class PlayerCharacterAnimationController : MonoBehaviour
         Registry.Instance.refrences.player.calender.dateText.text = currentDate.Year.ToString();
         SetDanceStyle();
     }
+
 
     [Button]
     public void PopulateDanceStyleArray()
@@ -71,8 +73,12 @@ public class PlayerCharacterAnimationController : MonoBehaviour
     public void SetDanceStyle()
     {
         Registry.Instance.refrences.player.swirlEffect.PlayEffect();
+        Registry.Instance.refrences.player.SetPlayerCharacter();
         animator.SetTrigger(GetDanceStyle(currentDate.Year).id);
+
+        Registry.Instance.refrences.crowdManager.UpdateCharacters();
     }
+
 
     public void SetAnimation(string trigger)
     {
@@ -89,9 +95,6 @@ public class DanceStyle
 
     [Space]
     public DancePeriod dancePeriod;
-
-    [Space]
-    public PlayerCharacter character;
 
 }
 
