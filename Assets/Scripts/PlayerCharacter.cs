@@ -16,4 +16,9 @@ public class PlayerCharacter : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+
+    private void Update()
+    {
+        transform.localPosition = new Vector3(0, -0.679f, 0);
+    }
 }

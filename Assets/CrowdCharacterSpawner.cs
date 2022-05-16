@@ -47,6 +47,7 @@ public class CrowdCharacterSpawner : MonoBehaviour
         {
             distanceToPlayer = Vector3.Distance(Registry.Instance.refrences.player.transform.position, transform.position);
 
+
             if (distanceToPlayer > toggleDistance.x && distanceToPlayer < toggleDistance.y)
             {
                 crowdCharacter.gameObject.SetActive(true);
