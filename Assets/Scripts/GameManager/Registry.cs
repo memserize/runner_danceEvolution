@@ -38,10 +38,29 @@ public class Registry : MonoBehaviour
 
     public IEnumerator photoWait()
     {
-        yield return new WaitForSeconds(0.63f);
+        yield return new WaitForSeconds(0.8f);
         refrences.vShare.OnClickedOnIconScreenshot();
     }
 
+
+    public void HideStartCanvas()
+    {
+        refrences.startCanvas.DOFade(0, 0.85f).OnComplete(ToggleCanvas);
+    }
+
+    public void ToggleCanvas()
+    {
+        if(refrences.startCanvas.interactable)
+        {
+            refrences.startCanvas.interactable = false;
+            refrences.startCanvas.blocksRaycasts = false;
+        }
+        else
+        {
+            refrences.startCanvas.interactable = true;
+            refrences.startCanvas.blocksRaycasts = true;
+        }
+    }
 
 
 }
@@ -62,6 +81,8 @@ public class Refrences
     public TakeAndShowScreenshotFromScript takeAndShowScreenshot;
     public VSSHARE vShare;
 
-
+    [Title("UserInterface")]
+    public CanvasGroup startCanvas;
+    public CanvasGroup restartCanvas;
 
 }

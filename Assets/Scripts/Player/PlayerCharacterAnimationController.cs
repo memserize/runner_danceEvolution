@@ -77,7 +77,28 @@ public class PlayerCharacterAnimationController : MonoBehaviour
         SetAnimation(GetDanceStyle(currentDate.Year).id);
 
         Registry.Instance.refrences.crowdManager.UpdateCharacters();
+
+        if (Registry.Instance.refrences.player.collectedCharacters.Count > 0)
+        {
+            for (int i = 0; i < Registry.Instance.refrences.player.collectedCharacters.Count; i++)
+            {
+                Registry.Instance.refrences.player.collectedCharacters[i].variations[Registry.Instance.refrences.player.collectedCharacters[i].index].
+                    GetComponent<Animator>().SetTrigger(Registry.Instance.refrences.player.animationController.currentAnim);
+            }
+        }
+
     }
+
+
+    public void UpdateCollectedCharacterAnimators()
+    {
+        for (int i = 0; i < Registry.Instance.refrences.player.collectedCharacters.Count; i++)
+        {
+
+        }
+
+    }
+
 
 
     public void SetAnimation(string trigger)

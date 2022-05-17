@@ -338,7 +338,6 @@ namespace AppAdvisory.SharingSystem
 					AnimIconToWindow();
 				}
 			}
-			print("i clicked the screenshot");
 		}
 
 		void AnimIconToWindow()

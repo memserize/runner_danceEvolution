@@ -50,6 +50,16 @@ public class CollectableCharacterSpawner : MonoBehaviour
             character.transform.localPosition = new Vector3();
             character.variations[character.index].GetComponent<Animator>().runtimeAnimatorController = player.animationController.animator.runtimeAnimatorController;
             player.collectedCharacters.Add(character);
+
+            for (int i = 0; i < player.collectedCharacters.Count; i++)
+            {
+                player.collectedCharacters[i].variations[player.collectedCharacters[i].index].GetComponent<Animator>().SetTrigger(player.animationController.currentAnim);
+                player.collectedCharacters[i].variations[player.collectedCharacters[i].index].transform.eulerAngles = new Vector3();
+            }
+
+            player.animationController.animator.SetTrigger(player.animationController.currentAnim);
+
+            character.lockTransform = true;
             gameObject.SetActive(false);
         }
     }

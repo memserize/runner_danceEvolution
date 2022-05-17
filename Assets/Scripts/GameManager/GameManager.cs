@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
 
             refrences.crowdManager.Initialize();
             gameRunning = true;
+
+            Registry.Instance.HideStartCanvas();
         }
     }
     

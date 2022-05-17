@@ -42,4 +42,6 @@ public class PlayerRefrenceManager : MonoBehaviour
         animationController.animator = currentCharacter.animator;
     }
 
+
+
 }

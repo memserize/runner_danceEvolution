@@ -13,6 +13,7 @@ public class CollectableCharacter : MonoBehaviour
     public int index;
 
     [Space]
+    public bool lockTransform;
     public GameObject[] variations;
 
 
@@ -48,6 +49,18 @@ public class CollectableCharacter : MonoBehaviour
             swirlEffect.PlayEffect();
         }
 
-        //variations[index].GetComponent<Animator>().runtimeAnimatorController = Registry.Instance.refrences.player.animationController.animator.runtimeAnimatorController;
+    }
+
+    private void Update()
+    {
+        if(lockTransform)
+        {
+            for (int i = 0; i < variations.Length; i++)
+            {
+                variations[i].transform.localPosition = new Vector3();
+                variations[i].transform.eulerAngles = new Vector3();
+            }
+        }
+
     }
 }
