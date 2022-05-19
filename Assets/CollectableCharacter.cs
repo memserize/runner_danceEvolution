@@ -40,6 +40,7 @@ public class CollectableCharacter : MonoBehaviour
         {
             variations[i].SetActive(false);
         }
+
         variations[index].SetActive(true);
 
         variations[index].GetComponent<AnimationControllerAssigner>().SetAnimator();
@@ -48,6 +49,8 @@ public class CollectableCharacter : MonoBehaviour
         {
             swirlEffect.PlayEffect();
         }
+
+
 
     }
 

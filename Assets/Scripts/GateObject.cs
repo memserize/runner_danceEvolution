@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using System.Collections;
+using UnityEngine.Events;
+using DG.Tweening;
 using UnityEngine;
 using System;
 using TMPro;
@@ -11,18 +13,32 @@ public class GateObject : MonoBehaviour
 
     public Period period;
 
+    [Space]
+    public float distanceToPlayer;
+
+    [Space]
+    public Transform canvas;
 
     [Space]
     public int gateValue;
     public TextMeshProUGUI gateText;
 
+    [Space]
+    public UnityEvent onGatePass;
+
+    bool calculateDistance;
+
     private void Start()
     {
+        canvas = transform.GetChild(4).transform;
+
         if (gateValue > 0)
         {
             gateText.text = " + " + gateValue + " " + period;
 
         }
+
+        calculateDistance =  true;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -49,13 +65,33 @@ public class GateObject : MonoBehaviour
                     break;
             }
             Registry.Instance.refrences.player.animationController.UpdateDate(Registry.Instance.refrences.player.animationController.currentDate);
+
+            FadeOutText();
+            onGatePass.Invoke();
         }
     }
 
-    float distanceToPlayer;
+
     private void Update()
     {
-        distanceToPlayer = Vector3.Distance(Registry.Instance.refrences.player.transform.position, transform.position);
+        if(calculateDistance)
+        {
+            distanceToPlayer = Vector3.Distance(Registry.Instance.refrences.player.transform.position, transform.position);
+
+            if (canvas.localPosition.z != 0)
+            {
+                if (distanceToPlayer <= canvas.localPosition.z)
+                {
+                    canvas.localPosition = new Vector3(0, 0.4f, (distanceToPlayer));
+                }
+            }
+        }
+    }
+
+    public void FadeOutText()
+    {
+        canvas.GetComponent<CanvasGroup>().DOFade(0, 1);
+        calculateDistance = false;
 
     }
 

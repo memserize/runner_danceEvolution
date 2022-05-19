@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Tabtale.TTPlugins;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class GameManager : MonoBehaviour
 
 
     Refrences refrences;
+
+    private void Awake()
+    {
+        //TTPCore.Setup();
+    }
 
     private void Start()
     {

@@ -49,7 +49,6 @@ public class PlayerCharacterAnimationController : MonoBehaviour
 
             danceStylesList.Add(danceStyle);
         }
-
         danceStyles = danceStylesList.ToArray();
     }
 
@@ -86,7 +85,6 @@ public class PlayerCharacterAnimationController : MonoBehaviour
                     GetComponent<Animator>().SetTrigger(Registry.Instance.refrences.player.animationController.currentAnim);
             }
         }
-
     }
 
 
@@ -94,9 +92,8 @@ public class PlayerCharacterAnimationController : MonoBehaviour
     {
         for (int i = 0; i < Registry.Instance.refrences.player.collectedCharacters.Count; i++)
         {
-
+            Registry.Instance.refrences.player.collectedCharacters[i].UpdateCharacter(true);
         }
-
     }
 
 
@@ -107,10 +104,6 @@ public class PlayerCharacterAnimationController : MonoBehaviour
         currentAnim = trigger;
     }
 
-    private void Update()
-    {
-        
-    }
 
 }
 
