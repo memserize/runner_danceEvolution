@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using DG.Tweening;
 
 public class PlayerMovementController : MonoBehaviour
 {
@@ -61,10 +62,23 @@ public class PlayerMovementController : MonoBehaviour
                 Registry.Instance.refrences.player.animationController.SetAnimation("idle");
 
                 Registry.Instance.refrences.gameManager.OnLevelEnd.Invoke();
-
             }
+        }
+    }
 
+
+    public void RotateCharacters()
+    {
+        for (int i = 0; i < Registry.Instance.refrences.player.playerCharacters.Count; i++)
+        {
+            Registry.Instance.refrences.player.playerCharacters[i].lockTransforms = false;
+            Registry.Instance.refrences.player.playerCharacters[i].transform.DORotate(new Vector3(0, 180, 0), 0.5f);
         }
 
+        for (int i = 0; i < Registry.Instance.refrences.player.collectedCharacters.Count; i++)
+        {
+            Registry.Instance.refrences.player.collectedCharacters[i].lockTransform = true;
+            Registry.Instance.refrences.player.collectedCharacters[i].transform.DORotate(new Vector3(0, 180, 0), 0.5f);
+        }
     }
 }

@@ -85,4 +85,6 @@ public class Refrences
     public CanvasGroup startCanvas;
     public CanvasGroup restartCanvas;
 
+    public DanceCrewMiniGame DanceCrewMiniGame;
+
 }

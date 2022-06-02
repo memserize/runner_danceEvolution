@@ -51,11 +51,12 @@ public class CrowdCharacter : MonoBehaviour
 
         currentAnimator = variations[index].GetComponent<Animator>();
 
-        variations[index].GetComponent<AnimationControllerAssigner>().SetAnimator();
 
         if (playEffect)
         {
             swirlEffect.PlayEffect();
+            variations[index].GetComponent<AnimationControllerAssigner>().SetAnimator();
+
         }
     }
 

@@ -4925,6 +4925,7 @@ MonoBehaviour:
   currentAnimator: {fileID: 0}
   swirlEffect: {fileID: 2238483976003278053}
   index: 0
+  lockTransform: 0
   variations:
   - {fileID: 6681609530646468584}
   - {fileID: 6681609530646468584}
@@ -19716,24 +19717,10 @@ MonoBehaviour:
   runtimeAnimatorControllers:
   - {fileID: 9100000, guid: 8ae4009cde44e564ebd7c7f0564c3c74, type: 2}
   - {fileID: 9100000, guid: 4a40a982b40be59448ae7f1ff6102b20, type: 2}
-  - {fileID: 9100000, guid: 0f872f0a6d9879741b3244e9311c6b3a, type: 2}
-  - {fileID: 9100000, guid: db3886b9a1d47c146851bb3ba9fb1ed6, type: 2}
   - {fileID: 9100000, guid: 97f928293a35dc444acf769892f3009e, type: 2}
   onEnable:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RandomMaterial, Assembly-CSharp
-        m_MethodName: AssignMaterials
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1001 &3183369560123254639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19830,8 +19817,6 @@ MonoBehaviour:
   runtimeAnimatorControllers:
   - {fileID: 9100000, guid: 8ae4009cde44e564ebd7c7f0564c3c74, type: 2}
   - {fileID: 9100000, guid: 4a40a982b40be59448ae7f1ff6102b20, type: 2}
-  - {fileID: 9100000, guid: 0f872f0a6d9879741b3244e9311c6b3a, type: 2}
-  - {fileID: 9100000, guid: db3886b9a1d47c146851bb3ba9fb1ed6, type: 2}
   - {fileID: 9100000, guid: 97f928293a35dc444acf769892f3009e, type: 2}
   onEnable:
     m_PersistentCalls:
@@ -19932,8 +19917,6 @@ MonoBehaviour:
   runtimeAnimatorControllers:
   - {fileID: 9100000, guid: 8ae4009cde44e564ebd7c7f0564c3c74, type: 2}
   - {fileID: 9100000, guid: 4a40a982b40be59448ae7f1ff6102b20, type: 2}
-  - {fileID: 9100000, guid: 0f872f0a6d9879741b3244e9311c6b3a, type: 2}
-  - {fileID: 9100000, guid: db3886b9a1d47c146851bb3ba9fb1ed6, type: 2}
   - {fileID: 9100000, guid: 97f928293a35dc444acf769892f3009e, type: 2}
   onEnable:
     m_PersistentCalls:
@@ -20034,8 +20017,6 @@ MonoBehaviour:
   runtimeAnimatorControllers:
   - {fileID: 9100000, guid: 8ae4009cde44e564ebd7c7f0564c3c74, type: 2}
   - {fileID: 9100000, guid: 4a40a982b40be59448ae7f1ff6102b20, type: 2}
-  - {fileID: 9100000, guid: 0f872f0a6d9879741b3244e9311c6b3a, type: 2}
-  - {fileID: 9100000, guid: db3886b9a1d47c146851bb3ba9fb1ed6, type: 2}
   - {fileID: 9100000, guid: 97f928293a35dc444acf769892f3009e, type: 2}
   onEnable:
     m_PersistentCalls:

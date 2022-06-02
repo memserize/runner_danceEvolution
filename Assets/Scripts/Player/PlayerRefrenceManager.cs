@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Sirenix.OdinInspector;
 
 
@@ -28,6 +29,9 @@ public class PlayerRefrenceManager : MonoBehaviour
     [Space]
     public List<PlayerCharacter> playerCharacters = new List<PlayerCharacter>();
     public List<CollectableCharacter> collectedCharacters = new List<CollectableCharacter>();
+
+    [Space]
+    public UnityEvent onCharacterSlotsFilled;
     
 
     public void SetPlayerCharacter()
@@ -41,6 +45,8 @@ public class PlayerRefrenceManager : MonoBehaviour
         currentCharacter.gameObject.SetActive(true);
         animationController.animator = currentCharacter.animator;
     }
+
+
 
 
 

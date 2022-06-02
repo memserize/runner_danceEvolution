@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent OnLevelEnd;
 
+    public int hitObstacleCount;
 
     Refrences refrences;
 

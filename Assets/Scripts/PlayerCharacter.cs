@@ -7,6 +7,8 @@ using Sirenix.OdinInspector;
 public class PlayerCharacter : MonoBehaviour
 {
     public Animator animator;
+    public bool lockTransforms = true;
+
 
     [Space]
     public Material[] characterMaterials;
@@ -19,6 +21,11 @@ public class PlayerCharacter : MonoBehaviour
 
     private void Update()
     {
-        transform.localPosition = new Vector3(0, -0.679f, 0);
+        if (lockTransforms)
+        {
+            transform.localPosition = new Vector3(0, -0.679f, 0);
+            transform.localEulerAngles = new Vector3();
+        }
     }
+
 }

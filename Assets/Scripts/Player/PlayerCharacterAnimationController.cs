@@ -26,7 +26,6 @@ public class PlayerCharacterAnimationController : MonoBehaviour
         date = currentDate.ToString();
     }
 
-
     public void UpdateDate(DateTime dateTime)
     {
         currentDate = dateTime;
@@ -35,7 +34,6 @@ public class PlayerCharacterAnimationController : MonoBehaviour
         Registry.Instance.refrences.player.calender.dateText.text = currentDate.Year.ToString();
         SetDanceStyle();
     }
-
 
     [Button]
     public void PopulateDanceStyleArray()
@@ -52,7 +50,6 @@ public class PlayerCharacterAnimationController : MonoBehaviour
         danceStyles = danceStylesList.ToArray();
     }
 
-
     public DanceStyle GetDanceStyle(int year)
     {
         DanceStyle danceStyle = new DanceStyle();
@@ -68,25 +65,31 @@ public class PlayerCharacterAnimationController : MonoBehaviour
         return danceStyle;
     }
 
-
     public void SetDanceStyle()
     {
         Registry.Instance.refrences.player.swirlEffect.PlayEffect();
         Registry.Instance.refrences.player.SetPlayerCharacter();
+
         SetAnimation(GetDanceStyle(currentDate.Year).id);
 
         Registry.Instance.refrences.crowdManager.UpdateCharacters();
 
-        if (Registry.Instance.refrences.player.collectedCharacters.Count > 0)
+        if (GetDanceStyle(currentDate.Year).id == "twerking")
         {
-            for (int i = 0; i < Registry.Instance.refrences.player.collectedCharacters.Count; i++)
-            {
-                Registry.Instance.refrences.player.collectedCharacters[i].variations[Registry.Instance.refrences.player.collectedCharacters[i].index].
-                    GetComponent<Animator>().SetTrigger(Registry.Instance.refrences.player.animationController.currentAnim);
-            }
+            Registry.Instance.refrences.player.movementController.RotateCharacters();
         }
     }
 
+    public IEnumerator UpdateCollection()
+    {
+        yield return new WaitForSeconds(0.15f);
+
+        for (int i = 0; i < Registry.Instance.refrences.player.collectedCharacters.Count; i++)
+        {
+            Registry.Instance.refrences.player.collectedCharacters[i].variations[Registry.Instance.refrences.player.collectedCharacters[i].index].
+                GetComponent<Animator>().SetTrigger(Registry.Instance.refrences.player.animationController.currentAnim);
+        }
+    }
 
     public void UpdateCollectedCharacterAnimators()
     {
@@ -96,15 +99,11 @@ public class PlayerCharacterAnimationController : MonoBehaviour
         }
     }
 
-
-
     public void SetAnimation(string trigger)
     {
         animator.SetTrigger(trigger);
         currentAnim = trigger;
     }
-
-
 }
 
 

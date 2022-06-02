@@ -25,6 +25,8 @@ public class AnimationControllerAssigner : MonoBehaviour
 
     public void SetAnimator()
     {
-        animator.runtimeAnimatorController = runtimeAnimatorControllers[Random.Range(0, runtimeAnimatorControllers.Length)];
+       animator.runtimeAnimatorController = runtimeAnimatorControllers[Random.Range(0, runtimeAnimatorControllers.Length)];
     }
+
+
 }

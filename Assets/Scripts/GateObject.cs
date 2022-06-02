@@ -64,7 +64,17 @@ public class GateObject : MonoBehaviour
                     Registry.Instance.refrences.player.animationController.currentDate = Registry.Instance.refrences.player.animationController.currentDate.AddYears(gateValue);
                     break;
             }
+
             Registry.Instance.refrences.player.animationController.UpdateDate(Registry.Instance.refrences.player.animationController.currentDate);
+            StartCoroutine(Registry.Instance.refrences.player.animationController.UpdateCollection());
+
+            if (Registry.Instance.refrences.player.collectedCharacters.Count > 0)
+            {
+                for (int i = 0; i < Registry.Instance.refrences.player.collectedCharacters.Count; i++)
+                {
+                    Registry.Instance.refrences.player.collectedCharacters[i].ChangeCharacter();
+                }
+            }
 
             FadeOutText();
             onGatePass.Invoke();

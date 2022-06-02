@@ -19721,9 +19721,10 @@ MonoBehaviour:
   runtimeAnimatorControllers:
   - {fileID: 9100000, guid: 8ae4009cde44e564ebd7c7f0564c3c74, type: 2}
   - {fileID: 9100000, guid: 4a40a982b40be59448ae7f1ff6102b20, type: 2}
-  - {fileID: 9100000, guid: 0f872f0a6d9879741b3244e9311c6b3a, type: 2}
-  - {fileID: 9100000, guid: db3886b9a1d47c146851bb3ba9fb1ed6, type: 2}
   - {fileID: 9100000, guid: 97f928293a35dc444acf769892f3009e, type: 2}
+  onEnable:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &4515252529392220535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19830,9 +19831,10 @@ MonoBehaviour:
   runtimeAnimatorControllers:
   - {fileID: 9100000, guid: 8ae4009cde44e564ebd7c7f0564c3c74, type: 2}
   - {fileID: 9100000, guid: 4a40a982b40be59448ae7f1ff6102b20, type: 2}
-  - {fileID: 9100000, guid: 0f872f0a6d9879741b3244e9311c6b3a, type: 2}
-  - {fileID: 9100000, guid: db3886b9a1d47c146851bb3ba9fb1ed6, type: 2}
   - {fileID: 9100000, guid: 97f928293a35dc444acf769892f3009e, type: 2}
+  onEnable:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1454936473048515236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19957,9 +19959,10 @@ MonoBehaviour:
   runtimeAnimatorControllers:
   - {fileID: 9100000, guid: 8ae4009cde44e564ebd7c7f0564c3c74, type: 2}
   - {fileID: 9100000, guid: 4a40a982b40be59448ae7f1ff6102b20, type: 2}
-  - {fileID: 9100000, guid: 0f872f0a6d9879741b3244e9311c6b3a, type: 2}
-  - {fileID: 9100000, guid: db3886b9a1d47c146851bb3ba9fb1ed6, type: 2}
   - {fileID: 9100000, guid: 97f928293a35dc444acf769892f3009e, type: 2}
+  onEnable:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &4515252530388174155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20050,25 +20053,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac5eff7a54c87e145a24929e06b4afaa, type: 3}
   m_PrefabInstance: {fileID: 4515252530388174155}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4924273499659461366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3632170215136409626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dad9a05b2b40b8240a9504ff207a65c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 8053548741043960026}
-  runtimeAnimatorControllers:
-  - {fileID: 9100000, guid: 8ae4009cde44e564ebd7c7f0564c3c74, type: 2}
-  - {fileID: 9100000, guid: 4a40a982b40be59448ae7f1ff6102b20, type: 2}
-  - {fileID: 9100000, guid: 0f872f0a6d9879741b3244e9311c6b3a, type: 2}
-  - {fileID: 9100000, guid: db3886b9a1d47c146851bb3ba9fb1ed6, type: 2}
-  - {fileID: 9100000, guid: 97f928293a35dc444acf769892f3009e, type: 2}
 --- !u!114 &2262091549649250313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20096,6 +20080,26 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 3f50a590a6ba51b42aebb793ecbd1e37, type: 2}
   - {fileID: 2100000, guid: 155b2aec852e69443a942c5dc8477a49, type: 2}
   - {fileID: 2100000, guid: add63e907af80504c9b51462f43ec894, type: 2}
+--- !u!114 &4924273499659461366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3632170215136409626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad9a05b2b40b8240a9504ff207a65c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8053548741043960026}
+  runtimeAnimatorControllers:
+  - {fileID: 9100000, guid: 8ae4009cde44e564ebd7c7f0564c3c74, type: 2}
+  - {fileID: 9100000, guid: 4a40a982b40be59448ae7f1ff6102b20, type: 2}
+  - {fileID: 9100000, guid: 97f928293a35dc444acf769892f3009e, type: 2}
+  onEnable:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &4515252530692932783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20192,6 +20196,7 @@ MonoBehaviour:
   runtimeAnimatorControllers:
   - {fileID: 9100000, guid: 8ae4009cde44e564ebd7c7f0564c3c74, type: 2}
   - {fileID: 9100000, guid: 4a40a982b40be59448ae7f1ff6102b20, type: 2}
-  - {fileID: 9100000, guid: 0f872f0a6d9879741b3244e9311c6b3a, type: 2}
-  - {fileID: 9100000, guid: db3886b9a1d47c146851bb3ba9fb1ed6, type: 2}
   - {fileID: 9100000, guid: 97f928293a35dc444acf769892f3009e, type: 2}
+  onEnable:
+    m_PersistentCalls:
+      m_Calls: []

@@ -1,36 +1,11 @@
 fileFormatVersion: 2
-guid: 550f3d02fedf56b43acb6a75f5005011
+guid: deea06a902aab8b43a24e6c7f32731a9
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: gate_01
-    second: {fileID: 2100000, guid: 2a6b4f38918e402468628ecf8605ccb7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: gate_02
-    second: {fileID: 2100000, guid: 4e7718aea11aae14d81273181abe8206, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: gate_03
-    second: {fileID: 2100000, guid: 67fbd675beb40f94dbd7313198785137, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: gate_04
-    second: {fileID: 2100000, guid: 3d361a482ad94bb448c4c6a14554af26, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: gate_05
-    second: {fileID: 2100000, guid: ec0d69b6dae034841820a8c9674163be, type: 2}
+  externalObjects: {}
   materials:
-    materialImportMode: 2
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
