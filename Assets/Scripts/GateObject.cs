@@ -32,11 +32,11 @@ public class GateObject : MonoBehaviour
     {
         canvas = transform.GetChild(4).transform;
 
-        if (gateValue > 0)
-        {
-            gateText.text = " + " + gateValue + " " + period;
+        //if (gateValue > 0)
+        //{
+        //    gateText.text = " + " + gateValue + " " + period;
 
-        }
+        //}
 
         calculateDistance =  true;
     }
